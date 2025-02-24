@@ -1,5 +1,3 @@
-# Workflow for deploying a Next.js App Router project to GitHub Pages
-
 name: Deploy Next.js site to Pages
 
 on:
@@ -54,14 +52,14 @@ jobs:
           /** @type {import('next').NextConfig} */
           const nextConfig = {
             output: 'export',
-            basePath: '/portfolio', # Change this to match your repo name
+            basePath: '/portfolio_',
             trailingSlash: true,
           };
           module.exports = nextConfig;
           EOF
 
       - name: Build Next.js app
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build && ${{ steps.detect-package-manager.outputs.runner }} next export
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

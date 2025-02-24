@@ -1,4 +1,5 @@
 const path = require("path");
+
 const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
@@ -14,16 +15,19 @@ module.exports = {
       {
         protocol: "https",
         hostname: "res.cloudinary.com",
+        port: "", // Ensure this is correctly set or omitted
         pathname: "**",
       },
       {
         protocol: "https",
         hostname: "media.dev.to",
+        port: "",
         pathname: "**",
       },
       {
         protocol: "https",
         hostname: "media2.dev.to",
+        port: "",
         pathname: "**",
       },
     ],
