@@ -52,14 +52,15 @@ jobs:
           /** @type {import('next').NextConfig} */
           const nextConfig = {
             output: 'export',
-            basePath: '/portfolio_',
+            basePath: '/portfolio_', # Ensure this matches your repo name
+            assetPrefix: '/portfolio_/',
             trailingSlash: true,
           };
           module.exports = nextConfig;
           EOF
 
-      - name: Build Next.js app
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: Build and export Next.js app
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build && ${{ steps.detect-package-manager.outputs.runner }} next export
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
