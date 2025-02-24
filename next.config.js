@@ -4,8 +4,8 @@ const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
   output: "export",
-  basePath: isProd ? "/portfolio" : "",
-  assetPrefix: isProd ? "/portfolio/" : "",
+  basePath: isProd ? "/portfolio_" : "",
+  assetPrefix: isProd ? "/portfolio_/" : "",
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
