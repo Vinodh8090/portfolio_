@@ -59,8 +59,8 @@ jobs:
           module.exports = nextConfig;
           EOF
 
-      - name: Build and export Next.js app
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build && ${{ steps.detect-package-manager.outputs.runner }} next export
+      - name: Build Next.js app
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
