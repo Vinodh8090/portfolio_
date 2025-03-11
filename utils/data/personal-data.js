@@ -10,5 +10,5 @@ export const personalData = {
   github: "https://github.com/Vinodh8090",
   linkedIn: "https://www.linkedin.com/in/vinodh-karthik/",
   resume:
-    "https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing",
+    "https://drive.google.com/file/d/1CAnBr1-ZovQO7CP2qFxnR6DA8LG7g6i_/view?usp=drivesdk",
 };
